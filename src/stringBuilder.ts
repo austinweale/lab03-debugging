@@ -1,11 +1,11 @@
-class stringProcessor{
+class stringBuilder{
     private data: string;
-    constructor(input: string){
-        input = data;
+    public constructor(input: string){
+        this.data = input;
     }
 
     public getString(): string{
-        return data;
+        return this.data;
     }
 
     public setString(data:string){
@@ -23,3 +23,9 @@ class stringProcessor{
         this.data = chars.join('');
     }
 }
+
+let sb = new stringBuilder("hello");
+console.log(sb.getString());
+sb.setString("hello world");
+console.log(sb.getString());
+
